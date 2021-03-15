@@ -10,9 +10,10 @@ n = list(map(int,input().split()))
 a = n[0]
 b = n[1]
 
-def candles(a):
-    if a == 0:
-        return 0
-    return a + candles(int(a/b))
+res = a
 
-print(candles(a))
+while a >= b:
+    res = res + int(a/b)
+    a = int(a/b) + (a%b)
+
+print(res)
