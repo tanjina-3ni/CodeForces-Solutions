@@ -1,26 +1,18 @@
 # -*- coding: utf-8 -*-
 """
-Created on Thu Mar 18 11:23:55 2021
+Created on Mon May 24 12:06:30 2021
 
 @author: Aspire
 """
 
 t = int(input())
 
-while(t):
-    nk = list(map(int,input().split()))
-    a = list(map(int,input().split()))
-    b = list(map(int,input().split()))
-    a.sort()
-    b.sort(reverse=True)
-    i = 0
-    while(nk[1]):
-        if a[i] >= b[i]:
-            break
-        else:
-           a[i] = b[i]
-           i = i + 1
-        nk[1] = nk[1] - 1
-    print(sum(a))
-    
-    t = t - 1
+for i in range(0,t):
+    n,m = map(int,input().split())
+    if n==1:
+        print(0)
+    elif n==2:
+        print(m)
+    else:
+        print(2*m)
+        
